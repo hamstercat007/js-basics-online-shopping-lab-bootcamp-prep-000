@@ -9,13 +9,18 @@ function setCart(c) {
   return cart;
 }
 
+//Math.random() returns a number from 0.0001 to 0.9
+//max returns a number from 1 to the max
+// + 1 so you can return 100 because it goes up to 0.9999 and not 1.
 function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max)) + 1;
+  return Math.floor(Math.random() * max) + 1;
 }
 
 function addToCart(itemName) {
  // write your code here
  var item = {
+   /*This object has a property name called itemName, with a value of the argument passed to the function. Property name of the object does not change, but the value can change.*/
+   
    itemName: itemName, 
    itemPrice: getRandomInt(100),
  } 
